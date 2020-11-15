@@ -4,10 +4,13 @@
 if [ "$1" == "--help" ]; then
 echo -e "\n------------------------DOCUMENTATION------------------------\n"
 echo -e "   Usage ./findipaddrs.sh DIRECTORY [-u IP_ADDR | -p IP_ADDR] \n\n"
+echo -e "Required:\n"
+echo -e "   DIRECTORY: The starting directory. This directory will be traversed recursively.\n"
 echo -e "Options:\n"
 echo -e "   None/Default: Find the number of times any IP Address passed in occurs in any file in the directories below\n"
 echo -e "   -u: Find the number of times a passed ip address occurs in each file in the directory\n"
 echo -e "   -p: Find the number of times a passed ip address occurs in each file in the directory\n"
+echo -e "   IP_ADDR: IPv4 address in dot-decimal notation\n"
 echo -e "\n"
 exit 1
 fi
