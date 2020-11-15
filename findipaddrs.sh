@@ -29,21 +29,22 @@ perfile ()
 uniqfiles=$(grep -or "$2" $1 | awk 'BEGIN { FS=":" } { print $1 }' | sort | uniq)
 if [ -z "$uniqfiles" ]; then
     echo -e "IP Address $2 not found in any file(s)"
-fi
-for i in $uniqfiles; do
-    #grab just the filename from each result and how many times it occurs in each file
-    res=$(grep -or "$2" $i | wc -l)
-    file=$(echo "$i" | awk 'BEGIN { FS=":" } { print $1 }')
-    #strip out just the filename
-    file=${file##*/}
-    echo -e "IP Address $2 occurs $res time(s) in $file"
-done
+else
+    for i in $uniqfiles; do
+        #grab just the filename from each result and how many times it occurs in each file
+        res=$(grep -or "$2" $i | wc -l)
+        file=$(echo "$i" | awk 'BEGIN { FS=":" } { print $1 }')
+        #strip out just the filename
+        file=${file##*/}
+        echo -e "IP Address $2 occurs $res time(s) in $file"
+    done
+fi  
 }
 
 unique () 
 {
 res=$(grep -or "$2" $1 | wc -l)
-if [ -z "$res" ]; then
+if [ "$res" == 0 ]; then
     echo "IP Address $2 not found in any file(s)"
 else
     echo "IP Address $2 occurs $res time(s) in file(s): "
