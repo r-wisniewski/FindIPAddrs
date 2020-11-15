@@ -1,5 +1,5 @@
 ﻿# Usage
-   Usage ./findipaddrs.sh DIRECTORY [-u | -p [IP ADDR]] 
+   Usage ./findipaddrs.sh DIRECTORY [-u IP_ADDR | -p IP_ADDR]
 
 
 Options:

@@ -3,7 +3,7 @@
 #check if user wants help
 if [ "$1" == "--help" ]; then
 echo -e "\n------------------------DOCUMENTATION------------------------\n"
-echo -e "   Usage ./findipaddrs.sh DIRECTORY [-u | -p [IP ADDR]] \n\n"
+echo -e "   Usage ./findipaddrs.sh DIRECTORY [-u IP_ADDR | -p IP_ADDR] \n\n"
 echo -e "Options:\n"
 echo -e "   None/Default: Find the number of times any IP Address passed in occurs in any file in the directories below\n"
 echo -e "   -u: Find the number of times a passed ip address occurs in each file in the directory\n"
@@ -14,7 +14,7 @@ fi
 
 #check for the correct # of params are passed through
 if [ "$#" -lt 1 ]; then
-    echo -e "Usage ./findipaddrs.sh DIRECTORY [-u | -p [IP ADDR]]"
+    echo -e "Usage ./findipaddrs.sh DIRECTORY [-u IP_ADDR | -p IP_ADDR]"
     exit 2
 #this statement checks if an option is selected but no IP Addr is passed
 elif [ "$2" ] && [ -z "$3" ]; then
