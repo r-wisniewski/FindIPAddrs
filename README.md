@@ -7,7 +7,7 @@ Required:
 
 Options:
 
-	None/Default: Find the number of times any IP Address passed in occurs in any file in the directories below
+	None/Default: Print the number of times any IP Address in occurs in any file in the directories below
 
 	-u: Find the number of times a passed ip address occurs in each file in the directory
 
@@ -16,5 +16,5 @@ Options:
 	IP_ADDR: IPv4 address in dot-decimal notation
 
 # Description
-The findipaddr’s shell script will begin at the directory provided searching for either a specified Ipv4 address or any Ipv4 address found while traversing the supplied directory recursively.
+The findipaddr’s shell script will begin at the directory provided searching for either a specified IPv4 address or any IPv4 address found while traversing the supplied directory recursively.
 
