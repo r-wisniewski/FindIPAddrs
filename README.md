@@ -18,3 +18,6 @@ Options:
 # Description
 The findipaddr’s shell script will begin at the directory provided searching for either a specified IPv4 address or any IPv4 address found while traversing the supplied directory recursively.
 
+# Contact
+
+Robin Wisniewski – [LinkedIn](https://www.linkedin.com/in/robin-wisniewski/) –  [wisniewski.ro@gmail.com](mailto:wisniewski.ro@gmail.com)
